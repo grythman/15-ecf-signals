@@ -4,7 +4,7 @@
 /* $begin wasidewaitprob0 */
 int main()
 {
-    if (Fork() == 0)
+    if (fork() == 0)
     {
         printf("9");
         fflush(stdout);

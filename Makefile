@@ -2,7 +2,7 @@ CC = gcc
 CFLAGS = -Og
 LDLIBS = -lpthread
 
-PROGS = forks execs internal shellex signaldeadlock loop sigint sigintsafe procmask1 procmask2 waitforsignal sigsuspend setjmp restart
+PROGS = forks execs internal shellex signaldeadlock loop sigint sigintsafe procmask1 procmask2 waitforsignal sigsuspend setjmp restart global-waittprob0
 
 all: $(PROGS)
 
@@ -20,6 +20,7 @@ waitforsignal: waitforsignal.c csapp.c
 sigsuspend: sigsuspend.c csapp.c
 setjmp: setjmp.c csapp.c
 restart: restart.c csapp.c
+global-waitprob0: global-waittprob0.c csapp.c
 
 clean:
 	rm -rf *~ $(PROGS)
